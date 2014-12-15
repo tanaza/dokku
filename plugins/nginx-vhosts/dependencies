@@ -4,7 +4,7 @@ set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 case "$DOKKU_DISTRO" in
   ubuntu)
     apt-get install -qq -y software-properties-common python-software-properties
-    add-apt-repository -y ppa:nginx/stable
+    add-apt-repository -y "deb http://nginx.org/packages/debian/ squeeze nginx"
     apt-get update
     apt-get install -qq -y nginx dnsutils
     ;;
