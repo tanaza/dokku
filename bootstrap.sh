@@ -5,7 +5,7 @@
 
 set -eo pipefail
 export DEBIAN_FRONTEND=noninteractive
-export DOKKU_REPO=${DOKKU_REPO:-"https://github.com/progrium/dokku.git"}
+export DOKKU_REPO=${DOKKU_REPO:-"https://github.com/tanaza/dokku.git"}
 
 if ! command -v apt-get &>/dev/null
 then
@@ -32,4 +32,4 @@ make install
 
 echo
 echo "Almost done! For next steps on configuration:"
-echo "  https://github.com/progrium/dokku#configuring"
+echo "  https://github.com/tanaza/dokku#configuring"
