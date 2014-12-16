@@ -44,7 +44,9 @@ plugin-dependencies: pluginhook
 	dokku plugins-install-dependencies
 
 plugins: pluginhook docker
+	echo "asd1"
 	dokku plugins-install
+	echo "asd2"
 
 dependencies: sshcommand pluginhook docker stack
 
