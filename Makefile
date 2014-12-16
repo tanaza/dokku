@@ -41,12 +41,10 @@ version:
 	git describe --tags > ${DOKKU_ROOT}/VERSION  2> /dev/null || echo '~${DOKKU_VERSION} ($(shell date -uIminutes))' > ${DOKKU_ROOT}/VERSION
 
 plugin-dependencies: pluginhook
-	dokku plugins-install-dependencies
+	DOKKU_TRACE=1 dokku plugins-install-dependencies
 
 plugins: pluginhook docker
-	echo "asd1"
-	dokku plugins-install
-	echo "asd2"
+	DOKKU_TRACE=1 dokku plugins-install
 
 dependencies: sshcommand pluginhook docker stack
 
